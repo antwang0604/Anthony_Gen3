@@ -1,0 +1,5 @@
+<launch>
+  <group ns="my_gen3">
+    <node pkg="moveit_test" name="gen3_arm_pick_place" type="test_file"/>
+  </group>
+</launch>

@@ -123,8 +123,10 @@
             <!-- Without gripper -->
             <include file="$(find gen3_move_it_config)/launch/move_group.launch"
                 if="$(eval not arg('gripper'))"/> 
-            <!-- With gripper -->
-            <include file="$(find gen3_robotiq_2f_85_move_it_config)/launch/move_group.launch"
+            <!-- With gripper Comment out one of the two when launching to select which gripper -->
+            <!-- <include file="$(find gen3_robotiq_2f_85_move_it_config)/launch/move_group.launch"
+                unless="$(eval not arg('gripper'))"/> -->
+            <include file="$(find gen3_custom_gripper_move_it_config)/launch/move_group.launch"
                 unless="$(eval not arg('gripper'))"/> 
 
             <!-- Unpause the physics in Gazebo and home the robot -->
